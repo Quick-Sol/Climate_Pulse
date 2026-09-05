@@ -2,16 +2,20 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps { checkout scm }
+            steps {
+                checkout scm
+            }
         }
-        stage('Install') {
-            steps { sh 'npm install' }
-        }
-        stage('Test') {
-            steps { sh 'npm test' }
+        stage('Validate HTML') {
+            steps {
+                bat 'npm install -g html-validate'
+                bat 'html-validate "**/*.html"'
+            }
         }
         stage('Build') {
-            steps { sh 'npm run build' }
+            steps {
+                echo 'Static site — no build step required'
+            }
         }
     }
 }
