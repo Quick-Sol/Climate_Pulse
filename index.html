@@ -50,13 +50,13 @@
                 <h3 class="section-title">Climate Trend</h3>
                 <div class="flex flex-wrap gap-2">
                   <div class="flex rounded-lg overflow-hidden border border-slate-200">
-                    <button class="btn btn-primary btn-sm rounded-none" data-period="daily">Daily</button>
-                    <button class="btn btn-ghost btn-sm rounded-none" data-period="weekly">Weekly</button>
+                    <button type="button" class="btn btn-primary btn-sm rounded-none" data-period="daily">Daily</button>
+                    <button type="button" class="btn btn-ghost btn-sm rounded-none" data-period="weekly">Weekly</button>
                   </div>
                   <div class="flex rounded-lg overflow-hidden border border-slate-200">
-                    <button class="btn btn-primary btn-sm rounded-none" data-metric="temperature">Temp</button>
-                    <button class="btn btn-ghost btn-sm rounded-none" data-metric="humidity">Humidity</button>
-                    <button class="btn btn-ghost btn-sm rounded-none" data-metric="aqi">AQI</button>
+                    <button type="button" class="btn btn-primary btn-sm rounded-none" data-metric="temperature">Temp</button>
+                    <button type="button" class="btn btn-ghost btn-sm rounded-none" data-metric="humidity">Humidity</button>
+                    <button type="button" class="btn btn-ghost btn-sm rounded-none" data-metric="aqi">AQI</button>
                   </div>
                 </div>
               </div>
@@ -65,10 +65,10 @@
             <div class="clima-card p-5">
               <h3 class="section-title mb-4">Gas Breakdown</h3>
               <div id="gas-breakdown"></div>
-              <button id="email-summary-btn" class="btn btn-primary w-full mt-4">
+              <button type="button" id="email-summary-btn" class="btn btn-primary w-full mt-4">
                 Email me today's summary
               </button>
-              <textarea id="email-preview-template" class="hidden" aria-hidden="true"></textarea>
+              <textarea id="email-preview-template" class="hidden"></textarea>
             </div>
           </div>
 
