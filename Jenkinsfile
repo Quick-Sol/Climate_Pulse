@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Validate HTML') {
             steps {
-                bat 'npm install -g html-validate'
-                bat 'html-validate "**/*.html"'
+                bat 'npm install html-validate'
+                bat 'npx html-validate "**/*.html"'
             }
         }
         stage('Build') {
