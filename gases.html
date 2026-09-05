@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClimaPulse — Gas Intelligence">
+  <title>ClimaPulse — Gas Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230284c7'/><path d='M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z' fill='white'/></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="app-header"></header>
+
+  <main>
+    <div class="container-max py-8">
+      <div class="page-hero rounded-3xl p-8 bg-white border border-slate-200 relative mb-8">
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <p class="text-sm font-semibold text-sky-600 mb-1">Atmospheric Monitoring</p>
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Gas Intelligence</h1>
+            <p class="text-slate-500 mt-1">Track key atmospheric pollutants in <span class="font-semibold" id="gas-location-label">New York</span>. Select a gas to explore its impacts and actions.</p>
+          </div>
+          <div id="gas-location-search" class="w-full md:w-80"></div>
+        </div>
+      </div>
+
+      <div id="gas-cards" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </div>
+  </main>
+
+  <footer id="app-footer"></footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

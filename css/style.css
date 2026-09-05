@@ -1,0 +1,119 @@
+/* ============================================
+   ClimaPulse — Style CSS
+   Design system, base styles & layout helpers
+   ============================================ */
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+
+  --primary: #0284c7;
+  --primary-dark: #0369a1;
+  --primary-light: #0ea5e9;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --warning: #f59e0b;
+  --danger: #f43f5e;
+  --orange: #f97316;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--text); font-weight: 700; line-height: 1.25; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+ul, ol { list-style-position: inside; }
+img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* ---------- Typography helpers ---------- */
+.text-gradient {
+  background: linear-gradient(135deg, #0369a1, #0d9488);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Layout utility container ---------- */
+.container-max { max-width: 1200px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+.container-narrow { max-width: 880px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+
+/* ---------- Star pattern background for hero ---------- */
+.hero-card-gradient-sky {
+  background: linear-gradient(135deg, #e0f2fe, #ccfbf1);
+}
+
+/* ---------- Severity colors -------- */
+.sev-good { color: #059669; }
+.sev-moderate { color: #b45309; }
+.sev-sensitive { color: #d97706; }
+.sev-unhealthy { color: #ea580c; }
+.sev-very-unhealthy { color: #e11d48; }
+.sev-hazardous { color: #dc2626; }
+.sev-low { color: #059669; }
+.sev-moderate-risk { color: #d97706; }
+.sev-high { color: #ea580c; }
+.sev-severe { color: #dc2626; }
+.sev-on-track { color: #059669; }
+.sev-lagging { color: #d97706; }
+.sev-non-compliant { color: #dc2626; }
+
+.bg-sev-good { background-color: #ecfdf5; }
+.bg-sev-moderate { background-color: #fffbeb; }
+.bg-sev-sensitive { background-color: #fef3c7; }
+.bg-sev-unhealthy { background-color: #ffedd5; }
+.bg-sev-very-unhealthy { background-color: #ffe4e6; }
+.bg-sev-hazardous { background-color: #fef2f2; }
+
+/* ---------- Status pill ---------- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.status-pill .dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; border: 2px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; background-clip: content-box; border: 2px solid transparent; }
+
+/* Hidden scrollbar for chat */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

@@ -1,0 +1,49 @@
+/* ============================================
+   ClimaPulse — Responsive CSS
+   ============================================ */
+
+/* ---------- Desktop nav ---------- */
+.desktop-nav { display: flex; }
+.mobile-menu-btn { display: none; }
+
+/* ---------- Mobile menu panel ---------- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+}
+.mobile-menu.open { display: block; animation: fadeIn 0.2s ease-out both; }
+.mobile-menu-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(80vw, 20rem);
+  background: #fff;
+  box-shadow: 24px 0 60px -20px rgba(15, 23, 42, 0.4);
+  padding: 1.25rem;
+  overflow-y: auto;
+  animation: slideInLeft 0.28s ease-out both;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-btn { display: inline-flex; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .container-max { padding-left: 0.875rem; padding-right: 0.875rem; }
+  .container-narrow { padding-left: 0.875rem; padding-right: 0.875rem; }
+  .clima-card-body { padding: 1rem; }
+  .chat-msg { max-width: 90%; }
+  .grid-stack { gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .logo-subtitle { display: none; }
+}

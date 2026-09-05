@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClimaPulse — Government Intelligence">
+  <title>ClimaPulse — Government Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230284c7'/><path d='M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z' fill='white'/></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="app-header"></header>
+
+  <main>
+    <div class="container-max py-8">
+      <div class="page-hero rounded-3xl p-8 bg-white border border-slate-200 relative mb-8">
+        <div class="relative z-10">
+          <p class="text-sm font-semibold text-sky-600 mb-1">Policy & Accountability</p>
+          <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Government Intelligence</h1>
+          <p class="text-slate-500 mt-1 max-w-2xl">National compliance scorecards, local climate regulations, and industrial accountability measures.</p>
+        </div>
+      </div>
+
+      <div class="mb-4 flex items-center gap-3">
+        <h2 class="text-xl font-bold text-slate-900">National Compliance Scorecard</h2>
+      </div>
+      <div id="gov-score-loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="clima-card p-5"><div class="skeleton h-20 mb-3"></div><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+        <div class="clima-card p-5"><div class="skeleton h-20 mb-3"></div><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+        <div class="clima-card p-5"><div class="skeleton h-20 mb-3"></div><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+        <div class="clima-card p-5"><div class="skeleton h-20 mb-3"></div><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+      </div>
+      <div id="scorecard-grid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+
+      <div class="mt-12 mb-4 flex items-center gap-3">
+        <h2 class="text-xl font-bold text-slate-900">Global Regulation Explorer</h2>
+      </div>
+      <div class="clima-card p-6 mb-4 w-full md:w-96">
+        <p class="text-sm font-semibold text-slate-700 mb-2">Select a city</p>
+        <div id="gov-location-search"></div>
+      </div>
+      <div id="regulation-explorer"></div>
+
+      <div class="mt-12">
+        <div id="industrial-accountability"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="app-footer"></footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
