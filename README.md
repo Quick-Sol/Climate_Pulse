@@ -1,6 +1,6 @@
-# 🌍 ClimaPulse
+# 🌍 Climate_Pulse
 
-**Hyper-Local Climate Intelligence Platform**
+## Hyper-Local Climate Intelligence Platform
 
 ClimaPulse is a complete, production-quality frontend web application for climate, air quality, gas, soil, water, government, and industrial environmental intelligence. It is built with **HTML5, CSS3, Vanilla JavaScript, and Tailwind CSS**, with **Chart.js**, **Lucide-style SVG icons**, and **Marked.js** used only where needed.
 
